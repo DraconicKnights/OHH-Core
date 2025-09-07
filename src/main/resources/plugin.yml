@@ -1,0 +1,4 @@
+name: OHH-Core
+version: '1.0-SNAPSHOT'
+main: com.draconincdomain.mc.OHHCore
+api-version: '1.21'
