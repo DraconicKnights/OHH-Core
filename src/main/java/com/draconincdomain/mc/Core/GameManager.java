@@ -3,6 +3,8 @@ package com.draconincdomain.mc.Core;
 import com.draconincdomain.mc.Data.PlayerData;
 import com.draconincdomain.mc.Data.PlayerTeam;
 
+import java.util.Map;
+
 public class GameManager {
     private static GameManager instance;
 
@@ -40,6 +42,14 @@ public class GameManager {
 
     public void deleteTeam(int teamId) {
         PlayerData.getPlayerTeams().remove(teamId);
+    }
+
+    public Map<Integer, PlayerTeam> getPlayerTeams() {
+        return PlayerData.getPlayerTeams();
+    }
+
+    public PlayerTeam getTeam(int teamId) {
+        return PlayerData.getPlayerTeam(teamId);
     }
 
     private int generateNextTeamId() {
