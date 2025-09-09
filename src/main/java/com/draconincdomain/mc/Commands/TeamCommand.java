@@ -127,6 +127,8 @@ public class TeamCommand extends CommandCore {
         team.getTeamMembers().forEach(uuid -> {
             sb.append(ChatColor.AQUA).append("Player: ").append(Bukkit.getPlayer(uuid).getName()).append("\n");
         });
+
+        player.sendMessage(sb.toString());
     }
 
     private void handleAssignHelperTeam(Player player, String[] args) {
